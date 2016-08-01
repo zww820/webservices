@@ -30,40 +30,40 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="SoapSampler.URL_DATA">http://14.215.119.58:9010/zhwbsid/services/function/CommonSetService</stringProp>
+          <stringProp name="SoapSampler.URL_DATA">http://14.215.119.58:9010/ZHWBSID/services/function/CommonSetService</stringProp>
           <stringProp name="HTTPSamper.xml_data">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:gdbs=&quot;http://www.gdbs.gov.cn&quot;&gt;
    &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
       &lt;gdbs:setDataXmlToFocus&gt;
-         &lt;gdbs:in0&gt;4404040044&lt;/gdbs:in0&gt;
+         &lt;gdbs:in0&gt;440404&lt;/gdbs:in0&gt;
          &lt;gdbs:in1&gt;&lt;![CDATA[
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;ExInfo&gt;
 &lt;standardInfo process=&quot;EX_GDBS_SB&quot;&gt;
-&lt;Field FieldName=&apos;SBLSH&apos;&gt;ZQ010504201400000164&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBLSH&apos;&gt;XZTEST10117600245592850${__Random(0000001,1000000,sblsh)}&lt;/Field&gt;
 &lt;Field FieldName=&apos;SXBM&apos;&gt;10117600245592850X13440400&lt;/Field&gt;
 &lt;Field FieldName=&apos;SXMC&apos;&gt;住房公积金的提取审批&lt;/Field&gt;
 &lt;Field FieldName=&apos;FSXBM&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;FSXMC&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;SQRLX&apos;&gt;1&lt;/Field&gt;
-&lt;Field FieldName=&apos;SQRMC&apos;&gt;乔志巍&lt;/Field&gt;
+&lt;Field FieldName=&apos;SQRMC&apos;&gt;测试&lt;/Field&gt;
 &lt;Field FieldName=&apos;SQRZJHM&apos;&gt;150404198404020021&lt;/Field&gt;
-&lt;Field FieldName=&apos;LXRXM&apos;&gt;乔志巍&lt;/Field&gt;
+&lt;Field FieldName=&apos;LXRXM&apos;&gt;测试&lt;/Field&gt;
 &lt;Field FieldName=&apos;LXRZJLX&apos;&gt;10&lt;/Field&gt;
 &lt;Field FieldName=&apos;LXRSFZJHM&apos;&gt;150404198404020021&lt;/Field&gt;
-&lt;Field FieldName=&apos;LXRSJ&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;LXRSJ&apos;&gt;18026367800&lt;/Field&gt;
 &lt;Field FieldName=&apos;LXRYX&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;SBXMMC&apos;&gt;住房公积金的提取审批&lt;/Field&gt;
 &lt;Field FieldName=&apos;SBCLQD&apos;&gt;本人有效身份证件；公积金存折或公积金联名卡；其他申请资料&lt;/Field&gt;
 &lt;Field FieldName=&apos;TJFS&apos;&gt;1&lt;/Field&gt;
-&lt;Field FieldName=&apos;SBHZH&apos;&gt;ZQ010504201400000164&lt;/Field&gt;
-&lt;Field FieldName=&apos;SBSJ&apos;&gt;2014/1/6 9:03:20&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBHZH&apos;&gt;XZTEST01050420140${__Random(0000001,1000000,sbhzh)}&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBSJ&apos;&gt;${__time(yyyy-MM-dd HH:mm:ss,date)}&lt;/Field&gt;
 &lt;Field FieldName=&apos;SBJTWD&apos;&gt;珠海市住房公积金管理中心服务大厅&lt;/Field&gt;
 &lt;Field FieldName=&apos;XZQHDM&apos;&gt;440402&lt;/Field&gt;
 &lt;Field FieldName=&apos;YSBLSH&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;BZ&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;BYZD&apos;&gt;&lt;/Field&gt;
-&lt;Field FieldName=DLYHM&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;DLYHM&apos;&gt;&lt;/Field&gt;
 &lt;/standardInfo&gt;
 &lt;/ExInfo&gt;
 ]]&gt;&lt;/gdbs:in1&gt;
@@ -78,22 +78,32 @@
           <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
         </SoapSampler>
-        <hashTree/>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1867169789">success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
         <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="受理" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="SoapSampler.URL_DATA">http://19.48.15.233:9010/zhwbsid/services/function/CommonSetService</stringProp>
+          <stringProp name="SoapSampler.URL_DATA">http://14.215.119.58:9010/ZHWBSID/services/function/CommonSetService</stringProp>
           <stringProp name="HTTPSamper.xml_data">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:gdbs=&quot;http://www.gdbs.gov.cn&quot;&gt;
    &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
       &lt;gdbs:setDataXmlToFocus&gt;
-         &lt;gdbs:in0&gt;4404040044&lt;/gdbs:in0&gt;
+         &lt;gdbs:in0&gt;440404&lt;/gdbs:in0&gt;
          &lt;gdbs:in1&gt;&lt;![CDATA[
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;ExInfo&gt;
 &lt;standardInfo process=&quot;EX_GDBS_SL&quot;&gt;
-&lt;Field FieldName=&apos;SBLSH&apos;&gt;ZQ010509201300002616&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBLSH&apos;&gt;XZTEST10117600245592850${__Random(0000001,1000000,sblsh)}&lt;/Field&gt;
 &lt;Field FieldName=&apos;SXBM&apos;&gt;10117600245592850X13440400&lt;/Field&gt;
 &lt;Field FieldName=&apos;YWLSH&apos;&gt;ZQ010509201300002616&lt;/Field&gt;
 &lt;Field FieldName=&apos;SLBMMC&apos;&gt;珠海市住房公积金管理中心服务前台&lt;/Field&gt;
@@ -101,10 +111,10 @@
 &lt;Field FieldName=&apos;XZQHDM&apos;&gt;440402&lt;/Field&gt;
 &lt;Field FieldName=&apos;BLRXM&apos;&gt;办事员&lt;/Field&gt;
 &lt;Field FieldName=&apos;BLRGH&apos;&gt;&lt;/Field&gt;
-&lt;Field FieldName=&apos;SLZTDM&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;SLZTDM&apos;&gt;1&lt;/Field&gt;
 &lt;Field FieldName=&apos;BSLYY&apos;&gt;&lt;/Field&gt;
-&lt;Field FieldName=&apos;SLHZH&apos;&gt;ZQ010509201300002616&lt;/Field&gt;
-&lt;Field FieldName=&apos;SLSJ&apos;&gt;2013/9/23&lt;/Field&gt;
+&lt;Field FieldName=&apos;SLHZH&apos;&gt;XZTEST01050420140${__Random(0000001,1000000,sbhzh)}&lt;/Field&gt;
+&lt;Field FieldName=&apos;SLSJ&apos;&gt;${__time(yyyy-MM-dd HH:mm:ss,date)}&lt;/Field&gt;
 &lt;Field FieldName=&apos;GXDXZQHDM&apos;&gt;440402&lt;/Field&gt;
 &lt;Field FieldName=&apos;BZ&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;BYZD&apos;&gt;&lt;/Field&gt;
@@ -122,33 +132,43 @@
           <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
         </SoapSampler>
-        <hashTree/>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1867169789">success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
         <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="审批" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="SoapSampler.URL_DATA">http://19.48.15.233:9010/zhwbsid/services/function/CommonSetService</stringProp>
+          <stringProp name="SoapSampler.URL_DATA">http://14.215.119.58:9010/ZHWBSID/services/function/CommonSetService</stringProp>
           <stringProp name="HTTPSamper.xml_data">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:gdbs=&quot;http://www.gdbs.gov.cn&quot;&gt;
    &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
       &lt;gdbs:setDataXmlToFocus&gt;
-         &lt;gdbs:in0&gt;4404040044&lt;/gdbs:in0&gt;
+         &lt;gdbs:in0&gt;440404&lt;/gdbs:in0&gt;
          &lt;gdbs:in1&gt;&lt;![CDATA[
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;ExInfo&gt;
 &lt;standardInfo process=&quot;EX_GDBS_SPCL&quot;&gt;
-&lt;Field FieldName=&apos;SBLSH&apos;&gt;ZQ010504201400000388&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBLSH&apos;&gt;XZTEST10117600245592850${__Random(0000001,1000000,sblsh)}&lt;/Field&gt;
 &lt;Field FieldName=&apos;SXBM&apos;&gt;10117600245592850X13440400&lt;/Field&gt;
 &lt;Field FieldName=&apos;SPHJDM&apos;&gt;1&lt;/Field&gt;
 &lt;Field FieldName=&apos;SPHJMC&apos;&gt;承办&lt;/Field&gt;
 &lt;Field FieldName=&apos;SPBMMC&apos;&gt;珠海市住房公积金管理中心服务前台&lt;/Field&gt;
 &lt;Field FieldName=&apos;SPBMZZJDMD&apos;&gt;45592850X&lt;/Field&gt;
 &lt;Field FieldName=&apos;XZQHDM&apos;&gt;440402&lt;/Field&gt;
-&lt;Field FieldName=&apos;SPRXM&apos;&gt;戴楚妍&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPRXM&apos;&gt;测试&lt;/Field&gt;
 &lt;Field FieldName=&apos;SPRZWDM&apos;&gt;224A&lt;/Field&gt;
 &lt;Field FieldName=&apos;SPRZWMC&apos;&gt;办事员&lt;/Field&gt;
 &lt;Field FieldName=&apos;SPYJ&apos;&gt;同意&lt;/Field&gt;
-&lt;Field FieldName=&apos;SPSJ&apos;&gt;2014/1/10 15:23:24&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPSJ&apos;&gt;${__time(yyyy-MM-dd HH:mm:ss,date)}&lt;/Field&gt;
 &lt;Field FieldName=&apos;SPHJZTDM&apos;&gt;3&lt;/Field&gt;
 &lt;Field FieldName=&apos;BZ&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;BYZD&apos;&gt;&lt;/Field&gt;
@@ -166,22 +186,32 @@
           <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
         </SoapSampler>
-        <hashTree/>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1867169789">success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
         <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="办结" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="SoapSampler.URL_DATA">http://19.48.15.233:9010/zhwbsid/services/function/CommonSetService</stringProp>
+          <stringProp name="SoapSampler.URL_DATA">http://14.215.119.58:9010/ZHWBSID/services/function/CommonSetService</stringProp>
           <stringProp name="HTTPSamper.xml_data">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:gdbs=&quot;http://www.gdbs.gov.cn&quot;&gt;
    &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
       &lt;gdbs:setDataXmlToFocus&gt;
-         &lt;gdbs:in0&gt;4404040044&lt;/gdbs:in0&gt;
+         &lt;gdbs:in0&gt;440404&lt;/gdbs:in0&gt;
          &lt;gdbs:in1&gt;&lt;![CDATA[
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;ExInfo&gt;
 &lt;standardInfo process=&quot;EX_GDBS_BJ&quot;&gt;
-&lt;Field FieldName=&apos;SBLSH&apos;&gt;ZQ010520201300001473&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBLSH&apos;&gt;XZTEST10117600245592850${__Random(0000001,1000000,sblsh)}&lt;/Field&gt;
 &lt;Field FieldName=&apos;SXBM&apos;&gt;10117600245592850X13440400&lt;/Field&gt;
 &lt;Field FieldName=&apos;BJBMMC&apos;&gt;珠海市住房公积金管理中心&lt;/Field&gt;
 &lt;Field FieldName=&apos;BJBMZZJDDM&apos;&gt;45592850X&lt;/Field&gt;
@@ -195,7 +225,7 @@
 &lt;Field FieldName=&apos;FZGZDW&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;SFJE&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;JEDWDM&apos;&gt;&lt;/Field&gt;
-&lt;Field FieldName=&apos;BJSJ&apos;&gt;2013/10/21 16:33:26&lt;/Field&gt;
+&lt;Field FieldName=&apos;BJSJ&apos;&gt;${__time(yyyy-MM-dd HH:mm:ss,date)}&lt;/Field&gt;
 &lt;Field FieldName=&apos;BZ&apos;&gt;&lt;/Field&gt;
 &lt;Field FieldName=&apos;BYZD&apos;&gt;&lt;/Field&gt;
 &lt;/standardInfo&gt;
@@ -212,7 +242,17 @@
           <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
         </SoapSampler>
-        <hashTree/>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1867169789">success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
