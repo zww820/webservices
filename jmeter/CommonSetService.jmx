@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r1743807">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1469764401000</longProp>
+        <longProp name="ThreadGroup.end_time">1469764401000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="申办" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SoapSampler.URL_DATA">http://14.215.119.58:9010/zhwbsid/services/function/CommonSetService</stringProp>
+          <stringProp name="HTTPSamper.xml_data">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:gdbs=&quot;http://www.gdbs.gov.cn&quot;&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;gdbs:setDataXmlToFocus&gt;
+         &lt;gdbs:in0&gt;4404040044&lt;/gdbs:in0&gt;
+         &lt;gdbs:in1&gt;&lt;![CDATA[
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ExInfo&gt;
+&lt;standardInfo process=&quot;EX_GDBS_SB&quot;&gt;
+&lt;Field FieldName=&apos;SBLSH&apos;&gt;ZQ010504201400000164&lt;/Field&gt;
+&lt;Field FieldName=&apos;SXBM&apos;&gt;10117600245592850X13440400&lt;/Field&gt;
+&lt;Field FieldName=&apos;SXMC&apos;&gt;住房公积金的提取审批&lt;/Field&gt;
+&lt;Field FieldName=&apos;FSXBM&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;FSXMC&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;SQRLX&apos;&gt;1&lt;/Field&gt;
+&lt;Field FieldName=&apos;SQRMC&apos;&gt;乔志巍&lt;/Field&gt;
+&lt;Field FieldName=&apos;SQRZJHM&apos;&gt;150404198404020021&lt;/Field&gt;
+&lt;Field FieldName=&apos;LXRXM&apos;&gt;乔志巍&lt;/Field&gt;
+&lt;Field FieldName=&apos;LXRZJLX&apos;&gt;10&lt;/Field&gt;
+&lt;Field FieldName=&apos;LXRSFZJHM&apos;&gt;150404198404020021&lt;/Field&gt;
+&lt;Field FieldName=&apos;LXRSJ&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;LXRYX&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBXMMC&apos;&gt;住房公积金的提取审批&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBCLQD&apos;&gt;本人有效身份证件；公积金存折或公积金联名卡；其他申请资料&lt;/Field&gt;
+&lt;Field FieldName=&apos;TJFS&apos;&gt;1&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBHZH&apos;&gt;ZQ010504201400000164&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBSJ&apos;&gt;2014/1/6 9:03:20&lt;/Field&gt;
+&lt;Field FieldName=&apos;SBJTWD&apos;&gt;珠海市住房公积金管理中心服务大厅&lt;/Field&gt;
+&lt;Field FieldName=&apos;XZQHDM&apos;&gt;440402&lt;/Field&gt;
+&lt;Field FieldName=&apos;YSBLSH&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;BZ&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;BYZD&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=DLYHM&gt;&lt;/Field&gt;
+&lt;/standardInfo&gt;
+&lt;/ExInfo&gt;
+]]&gt;&lt;/gdbs:in1&gt;
+         &lt;gdbs:in2&gt;EX_GDBS_SB&lt;/gdbs:in2&gt;
+         &lt;gdbs:in3&gt;cn2PD2hXvDzn2EPK&lt;/gdbs:in3&gt;
+      &lt;/gdbs:setDataXmlToFocus&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</stringProp>
+          <stringProp name="SoapSampler.xml_data_file"></stringProp>
+          <stringProp name="SoapSampler.SOAP_ACTION"></stringProp>
+          <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+        </SoapSampler>
+        <hashTree/>
+        <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="受理" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SoapSampler.URL_DATA">http://19.48.15.233:9010/zhwbsid/services/function/CommonSetService</stringProp>
+          <stringProp name="HTTPSamper.xml_data">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:gdbs=&quot;http://www.gdbs.gov.cn&quot;&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;gdbs:setDataXmlToFocus&gt;
+         &lt;gdbs:in0&gt;4404040044&lt;/gdbs:in0&gt;
+         &lt;gdbs:in1&gt;&lt;![CDATA[
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ExInfo&gt;
+&lt;standardInfo process=&quot;EX_GDBS_SL&quot;&gt;
+&lt;Field FieldName=&apos;SBLSH&apos;&gt;ZQ010509201300002616&lt;/Field&gt;
+&lt;Field FieldName=&apos;SXBM&apos;&gt;10117600245592850X13440400&lt;/Field&gt;
+&lt;Field FieldName=&apos;YWLSH&apos;&gt;ZQ010509201300002616&lt;/Field&gt;
+&lt;Field FieldName=&apos;SLBMMC&apos;&gt;珠海市住房公积金管理中心服务前台&lt;/Field&gt;
+&lt;Field FieldName=&apos;SLBMZZJDDM&apos;&gt;45592850X&lt;/Field&gt;
+&lt;Field FieldName=&apos;XZQHDM&apos;&gt;440402&lt;/Field&gt;
+&lt;Field FieldName=&apos;BLRXM&apos;&gt;办事员&lt;/Field&gt;
+&lt;Field FieldName=&apos;BLRGH&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;SLZTDM&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;BSLYY&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;SLHZH&apos;&gt;ZQ010509201300002616&lt;/Field&gt;
+&lt;Field FieldName=&apos;SLSJ&apos;&gt;2013/9/23&lt;/Field&gt;
+&lt;Field FieldName=&apos;GXDXZQHDM&apos;&gt;440402&lt;/Field&gt;
+&lt;Field FieldName=&apos;BZ&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;BYZD&apos;&gt;&lt;/Field&gt;
+&lt;/standardInfo&gt;
+&lt;/ExInfo&gt;
+]]&gt;&lt;/gdbs:in1&gt;
+         &lt;gdbs:in2&gt;EX_GDBS_SL&lt;/gdbs:in2&gt;
+         &lt;gdbs:in3&gt;cn2PD2hXvDzn2EPK&lt;/gdbs:in3&gt;
+      &lt;/gdbs:setDataXmlToFocus&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</stringProp>
+          <stringProp name="SoapSampler.xml_data_file"></stringProp>
+          <stringProp name="SoapSampler.SOAP_ACTION"></stringProp>
+          <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+        </SoapSampler>
+        <hashTree/>
+        <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="审批" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SoapSampler.URL_DATA">http://19.48.15.233:9010/zhwbsid/services/function/CommonSetService</stringProp>
+          <stringProp name="HTTPSamper.xml_data">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:gdbs=&quot;http://www.gdbs.gov.cn&quot;&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;gdbs:setDataXmlToFocus&gt;
+         &lt;gdbs:in0&gt;4404040044&lt;/gdbs:in0&gt;
+         &lt;gdbs:in1&gt;&lt;![CDATA[
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ExInfo&gt;
+&lt;standardInfo process=&quot;EX_GDBS_SPCL&quot;&gt;
+&lt;Field FieldName=&apos;SBLSH&apos;&gt;ZQ010504201400000388&lt;/Field&gt;
+&lt;Field FieldName=&apos;SXBM&apos;&gt;10117600245592850X13440400&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPHJDM&apos;&gt;1&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPHJMC&apos;&gt;承办&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPBMMC&apos;&gt;珠海市住房公积金管理中心服务前台&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPBMZZJDMD&apos;&gt;45592850X&lt;/Field&gt;
+&lt;Field FieldName=&apos;XZQHDM&apos;&gt;440402&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPRXM&apos;&gt;戴楚妍&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPRZWDM&apos;&gt;224A&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPRZWMC&apos;&gt;办事员&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPYJ&apos;&gt;同意&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPSJ&apos;&gt;2014/1/10 15:23:24&lt;/Field&gt;
+&lt;Field FieldName=&apos;SPHJZTDM&apos;&gt;3&lt;/Field&gt;
+&lt;Field FieldName=&apos;BZ&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;BYZD&apos;&gt;&lt;/Field&gt;
+&lt;/standardInfo&gt;
+&lt;/ExInfo&gt;
+]]&gt;&lt;/gdbs:in1&gt;
+         &lt;gdbs:in2&gt;EX_GDBS_SPCL&lt;/gdbs:in2&gt;
+         &lt;gdbs:in3&gt;cn2PD2hXvDzn2EPK&lt;/gdbs:in3&gt;
+      &lt;/gdbs:setDataXmlToFocus&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</stringProp>
+          <stringProp name="SoapSampler.xml_data_file"></stringProp>
+          <stringProp name="SoapSampler.SOAP_ACTION"></stringProp>
+          <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+        </SoapSampler>
+        <hashTree/>
+        <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="办结" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SoapSampler.URL_DATA">http://19.48.15.233:9010/zhwbsid/services/function/CommonSetService</stringProp>
+          <stringProp name="HTTPSamper.xml_data">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:gdbs=&quot;http://www.gdbs.gov.cn&quot;&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;gdbs:setDataXmlToFocus&gt;
+         &lt;gdbs:in0&gt;4404040044&lt;/gdbs:in0&gt;
+         &lt;gdbs:in1&gt;&lt;![CDATA[
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ExInfo&gt;
+&lt;standardInfo process=&quot;EX_GDBS_BJ&quot;&gt;
+&lt;Field FieldName=&apos;SBLSH&apos;&gt;ZQ010520201300001473&lt;/Field&gt;
+&lt;Field FieldName=&apos;SXBM&apos;&gt;10117600245592850X13440400&lt;/Field&gt;
+&lt;Field FieldName=&apos;BJBMMC&apos;&gt;珠海市住房公积金管理中心&lt;/Field&gt;
+&lt;Field FieldName=&apos;BJBMZZJDDM&apos;&gt;45592850X&lt;/Field&gt;
+&lt;Field FieldName=&apos;XZQHDM&apos;&gt;440402&lt;/Field&gt;
+&lt;Field FieldName=&apos;BJJGDM&apos;&gt;6&lt;/Field&gt;
+&lt;Field FieldName=&apos;BJJGMS&apos;&gt;审批通过&lt;/Field&gt;
+&lt;Field FieldName=&apos;ZFHTHYY&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;ZJGZMC&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;ZJBH&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;ZJYXQX&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;FZGZDW&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;SFJE&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;JEDWDM&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;BJSJ&apos;&gt;2013/10/21 16:33:26&lt;/Field&gt;
+&lt;Field FieldName=&apos;BZ&apos;&gt;&lt;/Field&gt;
+&lt;Field FieldName=&apos;BYZD&apos;&gt;&lt;/Field&gt;
+&lt;/standardInfo&gt;
+&lt;/ExInfo&gt;
+]]&gt;&lt;/gdbs:in1&gt;
+         &lt;gdbs:in2&gt;EX_GDBS_BJ&lt;/gdbs:in2&gt;
+         &lt;gdbs:in3&gt;cn2PD2hXvDzn2EPK&lt;/gdbs:in3&gt;
+      &lt;/gdbs:setDataXmlToFocus&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</stringProp>
+          <stringProp name="SoapSampler.xml_data_file"></stringProp>
+          <stringProp name="SoapSampler.SOAP_ACTION"></stringProp>
+          <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+        </SoapSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="图形结果" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="聚合报告" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.HitsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Hits per Second" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">1000</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">1000</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
